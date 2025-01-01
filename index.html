@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.cdnfonts.com/css/playstation" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>GameStation</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-secondary">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light" href="#">GameStation Store</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item ps-5">
+                <a class="nav-link active text-light " aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item ps-5">
+                <a class="nav-link text-light" href="#">Link</a>
+              </li>
+              <li class="nav-item ps-5">
+                <a class="nav-link text-light" href="#">Link</a>
+              </li>
+              <li class="nav-item ps-5">
+                <a class="nav-link text-light" href="#">Link</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="container-fluid mainCont p-0">
+        <button class="btn btn-warning ms-5 mt-4" id="addProd">Add product</button>
+        
+        <section class="gamesRow mt-3">
+        <div class="row d-flex justify-content-start" id="productDisplay">
+
+        </div>
+        
+        </section>
+      </div>
+
+
+
+
+
+   <!-- Modal ADD PRODUCT-->
+<div class="modal fade" id="modalAddBtn" tabindex="-1" aria-labelledby="modalAddBtn">
+  <div class="modal-dialog modal-dialog-centered" >
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-between">
+        <h5 class="modal-title ModalLongTitle">Add Product</h5>
+       
+      </div>
+      <div class="modal-body">
+        <form id="productForm">
+          <div class="form-group mt-3">
+            <label for="imgProdotto">Immagine</label>
+            <input id="imgProdotto" type="text" class="form-control" aria-describedby="nomeProdotto">
+    
+          </div>
+            <div class="form-group mt-3">
+              <label for="nomeProdotto">Nome Prodotto</label>
+              <input type="text" class="form-control" id="nomeProdotto" aria-describedby="nomeProdotto">
+            </div>
+            <div class="form-group mt-3">
+              <label for="desProdotto">Description</label>
+              <input type="text" class="form-control" id="desProdotto">
+            </div>
+            <div class="form-group mt-3">
+                <label for="brandProdotto">Brand</label>
+                <input type="text" class="form-control" id="brandProdotto">
+              </div>
+              <div class="form-group mt-3">
+              <label for="prezzoProdotto">Prezzo</label>
+              <input type="number" class="form-control" id="prezzoProdotto">
+            </div>
+            <div class="form-group mt-3">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" id="submit" class="btn btn-primary" >Submit</button>
+            </div>
+
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Modal EDIT PRODUCT-->
+  <div class="modal fade" id="modalEditBtn" tabindex="-1" aria-labelledby="modalEditBtn">
+    <div class="modal-dialog modal-dialog-centered" >
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-between">
+          <h5 class="modal-title ModalLongTitle">Edit Product</h5>
+         
+        </div>
+        <div class="modal-body">
+          <form id="productEditForm">
+            <div class="form-group mt-3">
+              <label for="imgProdottoED">Immagine</label>
+              <input id="imgProdottoED" type="text" class="form-control">
+      
+            </div>
+              <div class="form-group mt-3">
+                <label for="nomeProdottoED">Nome Prodotto</label>
+                <input type="text" class="form-control" id="nomeProdottoED">
+              </div>
+              <div class="form-group mt-3">
+                <label for="desProdottoED">Description</label>
+                <input type="text" class="form-control" id="desProdottoED">
+              </div>
+              <div class="form-group mt-3">
+                  <label for="brandProdottoED">Brand</label>
+                  <input type="text" class="form-control" id="brandProdottoED">
+                </div>
+                <div class="form-group mt-3">
+                <label for="prezzoProdottoED">Prezzo</label>
+                <input type="number" class="form-control" id="prezzoProdottoED">
+              </div>
+              <div class="form-group mt-3">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" id="submitEdit" class="btn btn-primary">Salva modifiche</button>
+              </div>
+  
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+ <!--  Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+
+<!--  Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- miei script  -->
+<script src="script.js"></script>
+<script src="scriptPost.js"></script>
+<script src="scriptCarousel.js"></script>
+<script src="https://kit.fontawesome.com/8b808880df.js" crossorigin="anonymous"></script>
+</body>
+</html>

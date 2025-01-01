@@ -1,0 +1,149 @@
+body {
+
+    justify-content: center;
+    background-color: rgb(7, 7, 52);
+
+}
+
+.navbar {
+    background-color: rgb(6, 6, 85) !important;
+    min-height: 100px;
+    font-size: larger;
+    font-family: "PlayStation", sans-serif;
+    box-shadow: 0px 0px 10px 0px rgb(255, 255, 255); 
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color  : rgb(252, 203, 9) !important;
+}     
+
+#productDisplay {
+    gap: 20px;
+    margin-top: 60px;
+    margin-left: 60px;
+
+}
+.cardProduct {
+ padding: 0px;
+ max-width: 20rem;
+ margin-top: 20px;
+ background-color: rgb(227, 232, 242);
+}
+
+
+.maxCard {    
+    overflow: hidden;
+    border-radius: 10px;
+    height:100%;
+    margin-right: 3%;
+    filter:brightness(0.2);
+    
+    
+}
+.list-group li {
+    background-color:rgb(227, 232, 242)!important;
+}
+
+.gamesRow {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.gameCard {
+    flex: 0 0 300px;
+    margin-right: 15px;
+}
+
+/* Il contenitore delle card */
+#gamesContainer { /* sostituisci con il tuo ID effettivo */
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Stile per i pulsanti di navigazione */
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
+}
+
+
+.cardProduct:hover{
+    background-color: rgb(255, 255, 255);
+    transform: translateY(-40px) scale(1.15);
+    transition: transform 0.8s ease-out;
+    z-index: 2;
+    box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+   
+    }
+
+    .cardProduct {
+        transition: transform 0.8s ease-out, background-color 0.8s ease-out;
+    }
+
+    .cardProduct:hover .maxCard {
+        filter: brightness(1);
+        transition: filter 0.8s ease-out;
+    }
+      .cardProduct:hover .list-group li {
+        background-color: rgb(255, 255, 255)!important;
+        transition: background-color 0.8s ease-out!important;
+      }
+.brand {
+    font-family:  'PlayStation', sans-serif;
+    color: rgb(15, 4, 96);
+    animation: sliding 3s infinite linear;
+   
+
+}
+
+.brandList{
+     overflow: hidden;
+    white-space: nowrap;
+}
+  
+@keyframes sliding {
+    0% {
+       margin-left: -80px;
+    }
+    
+    100% {
+        transform: translateX(110%);
+    }
+}
+
+.mainCont {
+    height:100%;
+}
+
+.card-title{
+    font-family: 'PlayStation', sans-serif;
+    font-size: 25px;
+    
+}
