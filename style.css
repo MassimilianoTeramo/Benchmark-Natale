@@ -31,7 +31,7 @@ body {
 }     
 
 #productDisplay {
-    gap: 20px;
+    gap: 30px;
     margin-top: 60px;
     margin-left: 60px;
 
@@ -41,6 +41,7 @@ body {
  max-width: 20rem;
  margin-top: 20px;
  background-color: rgb(227, 232, 242);
+transition: transform 0.8s ease-out; 
 }
 
 
@@ -48,7 +49,6 @@ body {
     overflow: hidden;
     border-radius: 10px;
     height:100%;
-    margin-right: 3%;
     filter:brightness(0.2);
     
     
@@ -57,43 +57,6 @@ body {
     background-color:rgb(227, 232, 242)!important;
 }
 
-.gamesRow {
-    position: relative;
-    overflow: hidden;
-    padding: 20px 0;
-    margin-top: 20px;
-}
-
-.gameCard {
-    flex: 0 0 300px;
-    margin-right: 15px;
-}
-
-/* Il contenitore delle card */
-#gamesContainer { /* sostituisci con il tuo ID effettivo */
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Stile per i pulsanti di navigazione */
-.prev-button,
-.next-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    cursor: pointer;
-}
-
-.prev-button {
-    left: 0;
-}
-
-.next-button {
-    right: 0;
-}
-
-
 .cardProduct:hover{
     background-color: rgb(255, 255, 255);
     transform: translateY(-40px) scale(1.15);
@@ -101,10 +64,6 @@ body {
     z-index: 2;
     box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
    
-    }
-
-    .cardProduct {
-        transition: transform 0.8s ease-out, background-color 0.8s ease-out;
     }
 
     .cardProduct:hover .maxCard {
